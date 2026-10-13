@@ -47,7 +47,7 @@
       effectivePackage = common.effectivePackage cfg;
       hermes-agent = inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
-      hermesHome = "${cfg.stateDir}/.hermes";
+      hermesHome = "${cfg.stateDir}/home";
 
       # In container mode, the agent uses the mount path in the container.
       effectiveWorkDir = if cfg.container.enable then containerWorkDir else cfg.workingDirectory;
